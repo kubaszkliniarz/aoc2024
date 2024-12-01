@@ -1,8 +1,11 @@
 import pandas as pd
+import os
 
-filepath = 'input.txt'
+wd = os.path.join(os.getcwd(), 'aoc2024/day1')
 
-df = pd.read_csv(filepath, sep="\s+", header=None, names=["Left", "Right"])
+filepath = os.path.join(wd, 'input.txt')
+
+df = pd.read_csv(filepath, sep=r"\s+", header=None, names=["Left", "Right"])
 
 left_series = df['Left']
 right_series = df['Right']
